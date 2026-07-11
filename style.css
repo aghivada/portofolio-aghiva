@@ -1,0 +1,868 @@
+/* ==========================================================================
+   1. RESET & VARIABLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2563eb;
+    /* Biru modern */
+    --text-color: #1f2937;
+    --text-light: #4b5563;
+    --bg-light: #f9fafb;
+    --bg-white: #ffffff;
+    --transition-smooth: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-white);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. NAVIGATION HEADER & MOBILE HAMBURGER
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    transition: var(--transition-smooth);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    transition: var(--transition-smooth);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: var(--transition-smooth);
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    gap: 4px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 2px;
+    transition: var(--transition-smooth);
+}
+
+/* ==========================================================================
+   3. GLOBAL SECTION STRUCTURE
+   ========================================================================== */
+.section {
+    padding: 7rem 2rem 5rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background-color: var(--primary-color);
+    bottom: -8px;
+    left: 0;
+    border-radius: 2px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+    transition: var(--transition-smooth);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* Style Tambahan untuk Tombol CV */
+.btn-cv {
+    padding: 0.7rem 1.8rem;
+    background-color: transparent !important;
+    color: var(--primary-color) !important;
+    border: 1.5px solid var(--primary-color) !important;
+    box-shadow: none !important;
+}
+
+.btn-cv:hover {
+    background-color: rgba(37, 99, 235, 0.05) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* ==========================================================================
+   4. HERO SECTION
+   ========================================================================== */
+.hero-section {
+    background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
+    text-align: left;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Flexbox untuk membagi teks dan foto */
+.hero-container-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h5 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content h3 {
+    font-size: 1.8rem;
+    color: var(--text-light);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Styling Tempat Foto */
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 20%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+    border: 3px solid var(--bg-white);
+    background-color: #e5e7eb;
+    /* Warna abu-abu background sebelum foto dimasukkan */
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Menjaga rasio foto tetap proporsional dalam lingkaran */
+    display: block;
+}
+
+/* ==========================================================================
+   10. MODAL POPUP SYSTEM STYLE
+   ========================================================================== */
+.project-card {
+    cursor: pointer;
+    /* Mengubah kursor jadi pointer menandakan bisa diklik */
+}
+
+.modal-overlay {
+    display: none;
+    /* Tersembunyi secara default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.6);
+    /* Overlay gelap transparan */
+    backdrop-filter: blur(8px);
+    /* Efek blur kaca premium */
+    z-index: 2000;
+    /* Di atas navbar */
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.modal-content {
+    background-color: var(--bg-white);
+    width: 100%;
+    max-width: 700px;
+    max-height: 85vh;
+    border-radius: 16px;
+    padding: 2.5rem;
+    position: relative;
+    overflow-y: auto;
+    /* Bisa di-scroll jika konten atau gambar terlalu panjang */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-light);
+    transition: var(--transition-smooth);
+}
+
+.modal-close:hover {
+    color: #ef4444;
+}
+
+.modal-project-detail h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.modal-tags {
+    margin-bottom: 1.5rem;
+}
+
+.modal-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.modal-project-detail h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Galeri Gambar Pendukung di Dalam Modal */
+.modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #f1f5f9;
+    border: 2px dashed #cbd5e1;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    overflow: hidden;
+}
+
+.gallery-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Penyesuaian Responsif di HP */
+@media (max-width: 576px) {
+    .modal-overlay {
+        padding: 1rem;
+    }
+
+    .modal-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .modal-project-detail h3 {
+        font-size: 1.4rem;
+        padding-right: 1.5rem;
+    }
+}
+
+/* ==========================================================================
+   5. ABOUT SECTION
+   ========================================================================== */
+.about-desc {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    text-align: justify;
+}
+
+.skills-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.skill-category {
+    margin-bottom: 1.8rem;
+}
+
+.skill-category h4 {
+    font-size: 1rem;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: var(--bg-light);
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.badge .icon {
+    margin-right: 0.5rem;
+    font-style: normal;
+}
+
+.badge:hover {
+    transform: translateY(-2px);
+    background-color: var(--bg-white);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.badge-blue {
+    border-color: rgba(59, 130, 246, 0.5);
+    color: #1d4ed8;
+}
+
+.badge-yellow {
+    border-color: rgba(234, 179, 8, 0.6);
+    color: #a16207;
+}
+
+.badge-orange {
+    border-color: rgba(249, 115, 22, 0.5);
+    color: #c2410c;
+}
+
+.badge-cyan {
+    border-color: rgba(6, 182, 212, 0.5);
+    color: #0e7490;
+}
+
+.badge-red {
+    border-color: rgba(239, 68, 68, 0.5);
+    color: #b91c1c;
+}
+
+.badge-green {
+    border-color: rgba(34, 197, 94, 0.5);
+    color: #15803d;
+}
+
+.badge-darkblue {
+    border-color: rgba(29, 78, 216, 0.5);
+    color: #1e40af;
+}
+
+.badge-purple {
+    border-color: rgba(168, 85, 247, 0.5);
+    color: #6b21a8;
+}
+
+.badge-dark {
+    border-color: rgba(31, 41, 55, 0.4);
+    color: #1f2937;
+}
+
+/* ==========================================================================
+   6. RESUME SECTION (TIMELINE)
+   ========================================================================== */
+.resume-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.resume-box h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.timeline {
+    border-left: 2px solid #e5e7eb;
+    padding-left: 1.5rem;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    left: -22px;
+    top: 6px;
+}
+
+.timeline-date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+
+/* ==========================================================================
+   7. PROJECTS SECTION
+   ========================================================================== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--bg-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    border: 1px solid #e5e7eb;
+    transition: var(--transition-smooth);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.project-info p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    background-color: #eff6ff;
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+}
+
+/* ==========================================================================
+   8. CONTACT SECTION (PEMBARUAN DESAIN UTUH & RESPONSIF)
+   ========================================================================== */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    /* 2 Kolom berdampingan di desktop */
+    gap: 3.5rem;
+    align-items: start;
+    margin-top: 1rem;
+}
+
+.contact-info-panel h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.contact-text-p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.info-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    background-color: var(--bg-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e5e7eb;
+}
+
+.info-details h5 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.info-details p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Desain Panel Form Input */
+.contact-form-panel {
+    background-color: var(--bg-white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e5e7eb;
+}
+
+.interactive-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    transition: var(--transition-smooth);
+    background-color: var(--bg-light);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: var(--bg-white);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.9rem;
+    text-align: center;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   11. FOOTER SYSTEM STYLE
+   ========================================================================== */
+footer {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    /* Latar gelap elegan */
+    padding: 3rem 0;
+    text-align: center;
+    color: #94a3b8;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    /* Jarak antara baris ikon dan teks copyright */
+}
+
+.social-links {
+    display: flex;
+    gap: 1.2rem;
+    /* Jarak antar ikon sosial media */
+    justify-content: center;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Lingkaran tipis transparan */
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Efek Hover saat Kursor Menyentuh Ikon */
+.social-icon:hover {
+    color: var(--primary-color, #2563eb);
+    border-color: var(--primary-color, #2563eb);
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+    margin: 0;
+}
+
+/* ==========================================================================
+   9. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.98);
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-links.show {
+        left: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 1.2rem 0;
+        width: 100%;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    /* Pengaturan Hero saat dibuka di HP */
+    .hero-container-flex {
+        flex-direction: column-reverse;
+        /* Foto akan berada di atas teks saat di HP */
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .hero-section {
+        padding-top: 8rem;
+        /* Memberi ruang agar tidak tertutup navbar */
+    }
+
+    .hero-image-wrapper {
+        width: 240px;
+        /* Ukuran foto sedikit mengecil di HP */
+        height: 240px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .section {
+        padding: 5rem 1.2rem 4rem;
+    }
+
+    /* Modifikasi Kontak Responsif: Di HP otomatis menumpuk atas-bawah */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .contact-form-panel {
+        padding: 1.5rem;
+    }
+}

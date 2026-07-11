@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Aghiva</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="image/pasfoto2.1.jpeg" type="image/x-icon" />
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Aghivada.</a>
+
+            <!-- Tombol Hamburger Menu untuk Mobile -->
+            <button class="menu-toggle" id="mobile-menu" aria-label="Buka Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 1. Section Home -->
+    <section id="home" class="section hero-section">
+        <div class="container hero-container-flex">
+            <!-- Kolom Teks -->
+            <div class="hero-content">
+                <h5>Halo, nama saya</h5>
+                <h1>Aghiva Dighva Arryana</h1>
+                <h3>Software Developer & Tech Enthusiast</h3>
+                <p>Fokus membangun aplikasi web dan mobile yang modern, interaktif, serta fungsional.</p>
+                <a href="#projects" class="btn">Project Saya</a>
+                <a href="CV-.pdf" target="_blank" class="btn btn-cv">Lihat CV</a>
+            </div>
+
+            <!-- Kolom Foto (Tempat Foto Anda) -->
+            <div class="hero-image-container">
+                <div class="hero-image-wrapper">
+                    <img src="image/pasfoto2.1.jpeg" alt="Foto Aghiva" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Section About (Tentang Saya - Tema Terang & Responsif) -->
+    <section id="about" class="section">
+        <div class="container">
+
+            <h2 class="section-title">Tentang Saya</h2>
+
+            <p class="about-desc">
+                Saya adalah mahasiswa Teknik Informatika di Universitas Muhammadiyah Purwokerto dengan ketertarikan pada
+                pengembangan web full-stack. Selama studi, saya telah mengembangkan berbagai proyek aplikasi web yang
+                mencakup perancangan antarmuka pengguna, pengembangan layanan backend, pengelolaan basis data relasional
+                dan non-relasional, integrasi API, serta pemanfaatan teknologi Artificial Intelligence (AI). Saya
+                memiliki semangat belajar yang tinggi dan berkomitmen menghasilkan solusi digital yang responsif, andal,
+                dan memberikan pengalaman pengguna yang optimal.
+            </p>
+
+            <h3 class="skills-title">Skills & Keahlian</h3>
+
+            <!-- Kategori 1: Programming Languages -->
+            <div class="skill-category">
+                <h4>Programming Languages</h4>
+                <div class="badge-container">
+                    <span class="badge badge-blue"><i class="icon">🐘</i> PHP</span>
+                    <span class="badge badge-yellow"><i class="icon">🟨</i> JavaScript</span>
+                    <span class="badge badge-orange"><i class="icon">🔥</i> HTML</span>
+                    <span class="badge badge-cyan"><i class="icon">🎨</i> CSS</span>
+                </div>
+            </div>
+
+            <!-- Kategori 2: Frameworks & Libraries -->
+            <div class="skill-category">
+                <h4>Frameworks & Libraries</h4>
+                <div class="badge-container">
+                    <span class="badge badge-green"><i class="icon">🟢</i> Node.js</span>
+                    <span class="badge badge-darkblue"><i class="icon">📦</i> Next.js</span>
+                    <span class="badge badge-cyan"><i class="icon">🌀</i> Tailwind CSS</span>
+                    <span class="badge badge-purple"><i class="icon">🟪</i> Bootstrap</span>
+                </div>
+            </div>
+
+            <!-- Kategori 3: Database & API -->
+            <div class="skill-category">
+                <h4>Database</h4>
+                <div class="badge-container">
+                    <span class="badge badge-cyan"><i class="icon">🐬</i> MySQL</span>
+                </div>
+            </div>
+
+            <!-- Kategori 4: Tools & Platforms -->
+            <div class="skill-category">
+                <h4>Tools & Platforms</h4>
+                <div class="badge-container">
+                    <span class="badge badge-dark"><i class="icon">🐱</i> Git/GitHub</span>
+                    <span class="badge badge-cyan"><i class="icon">🖌️</i> Canva</span>
+                    <span class="badge badge-red"><i class="icon">🎬</i> CapCut</span>
+                    <span class="badge badge-yellow"><i class="icon">✨</i> AI Tools</span>
+                    <span class="badge badge-red"><i class="icon">🧑‍💻</i> Blender</span>
+                </div>
+            </div>
+
+            <!-- Kategori 5: Soft Skills -->
+            <div class="skill-category">
+                <h4>Soft Skills</h4>
+                <div class="badge-container">
+                    <span class="badge badge-yellow"><i class="icon">💡</i> Komunikasi Intensif</span>
+                    <span class="badge badge-cyan"><i class="icon">🧩</i> Problem Solving</span>
+                    <span class="badge badge-green"><i class="icon">📋</i> Adaptibilitas Tinggi</span>
+                    <span class="badge badge-blue"><i class="icon">🛡️</i> Responsibility</span>
+                    <span class="badge badge-cyan"><i class="icon">👥</i> Kerja Sama Tim</span>
+                    <span class="badge badge-red"><i class="icon">🔴</i> Ketelitian Tinggi</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. Section Pengalaman & Pendidikan -->
+    <section id="resume" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-grid">
+                <!-- Pendidikan -->
+                <div class="resume-box">
+                    <h3>Pendidikan</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>SMAN 2 Cirebon</h4>
+                            <p class="timeline-date">2019 - 2021</p>
+                            <p>SMA jurusan IPA yang ada di Kota Cirebon.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Teknik Informatika</h4>
+                            <p class="timeline-date">2022 - Sekarang</p>
+                            <p>Fokus pada rekayasa perangkat lunak, pengembangan aplikasi, dan integrasi sistem IT.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pengalaman -->
+                <div class="resume-box">
+                    <h3>Pengalaman</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>Application Developer (Kerja Praktik)</h4>
+                            <p class="timeline-date">2025</p>
+                            <p>Merancang dan mengembangkan aplikasi berbasis website mengenai Sistem Informasi
+                                Manajemen Perpustakaan MTs An'Nur Kota Cirebon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Section Project -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="project-grid">
+                <!-- Card Project 1 -->
+                <div class="project-card" onclick="openProjectModal('project-masjid')">
+                    <div class="project-info">
+                        <h4>Website Masjid K.H Ahmad Dahlan UMP</h4>
+                        <p>Merancang dan membangun website yang menyediakan informasi mengenai Masjid Universitas
+                            Muhammadiyah Purwokerto.</p>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Bootstrap</span>
+                        <span
+                            style="display: block; margin-top: 1rem; font-size: 0.85rem; color: var(--primary-color); font-weight: 600;">Klik
+                            untuk detail &rarr;</span>
+                    </div>
+                </div>
+                <!-- Card Project 2 -->
+                <div class="project-card" onclick="openProjectModal('project-inote')">
+                    <div class="project-info">
+                        <h4>iNote</h4>
+                        <p>Aplikasi pencatat berbasis web yang memudahkan pengguna untuk menyimpan dan mengelola catatan
+                            harian.</p>
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                        <span
+                            style="display: block; margin-top: 1rem; font-size: 0.85rem; color: var(--primary-color); font-weight: 600;">Klik
+                            untuk detail &rarr;</span>
+                    </div>
+                </div>
+                <!-- Card Project 3 -->
+                <div class="project-card" onclick="openProjectModal('project-perpus')">
+                    <div class="project-info">
+                        <h4>Sistem Informasi Perpustakaan MTs An'Nur Cirebon</h4>
+                        <p>Merancang dan mengembangkan sistem informasi perpustakaan berbasis web yang digunakan oleh
+                            petugas dan anggota perpustakaan.</p>
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                        <span
+                            style="display: block; margin-top: 1rem; font-size: 0.85rem; color: var(--primary-color); font-weight: 600;">Klik
+                            untuk detail &rarr;</span>
+                    </div>
+                </div>
+                <!-- Card Project 4 -->
+                <div class="project-card" onclick="openProjectModal('project-ar')">
+                    <div class="project-info">
+                        <h4>UMP AR</h4>
+                        <p>Aplikasi pengenalan gedung interaktif menggunakan teknologi AR untuk pengenalan lingkungan
+                            kampus.</p>
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Blender</span>
+                        <span
+                            style="display: block; margin-top: 1rem; font-size: 0.85rem; color: var(--primary-color); font-weight: 600;">Klik
+                            untuk detail &rarr;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         MODAL POPUP DETAIL PROJECT
+         ============================-->
+    <div id="projectModal" class="modal-overlay" onclick="closeProjectModal(event)">
+        <div class="modal-content">
+            <!-- Tombol Close (X) -->
+            <button class="modal-close" onclick="closeModalAction()">&times;</button>
+
+            <!-- Detail Project 1: Website Masjid -->
+            <div id="project-masjid" class="modal-project-detail" style="display: none;">
+                <h3>Website Masjid K.H Ahmad Dahlan UMP</h3>
+                <div class="modal-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">Bootstrap</span>
+                    <span class="tag">Responsive Design</span>
+                </div>
+                <p class="modal-desc">
+                    Website informasi profil ini dirancang untuk mempermudah jamaah dan civitas akademika dalam
+                    mengakses informasi kegiatan keagamaan, jadwal kajian, kepengurusan takmir, hingga dokumentasi
+                    aktivitas di Masjid K.H Ahmad Dahlan Universitas Muhammadiyah Purwokerto. Dikembangkan menggunakan
+                    kerangka kerja Bootstrap agar tampilannya responsif dan nyaman diakses melalui perangkat apa pun.
+                </p>
+                <h4>Detail Gambar</h4>
+                <div class="modal-gallery">
+                    <div class="gallery-placeholder"><img src="image/indexMasjid.png" alt="Halaman Utama"
+                            onerror="this.parentElement.innerText='[Screenshot Beranda Website]'" /></div>
+                    <div class="gallery-placeholder"><img src="image/artikelMasjid.png" alt="Artikel Islami"
+                            onerror="this.parentElement.innerText='[Screenshot Fitur Kegiatan]'" /></div>
+                    <div class="gallery-placeholder"><img src="image/quizMasjid.png" alt="Quiz Islami"
+                            onerror="this.parentElement.innerText='[Screenshot Fitur Kegiatan]'" /></div>
+                </div>
+            </div>
+
+            <!-- Detail Project 2: iNote -->
+            <div id="project-inote" class="modal-project-detail" style="display: none;">
+                <h3>iNote - Digital Note Application</h3>
+                <div class="modal-tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Web Management</span>
+                </div>
+                <p class="modal-desc">
+                    iNote adalah aplikasi manajemen catatan pribadi berbasis web yang interaktif. Sistem ini
+                    memungkinkan pengguna untuk membuat, membaca, memperbarui, dan menghapus (CRUD) catatan harian
+                    mereka secara instan. Data tersimpan secara dinamis di dalam basis data MySQL, menjamin efisiensi
+                    dalam mengorganisasi agenda penting maupun tulisan ringkas harian.
+                </p>
+                <h4>Detail Gambar</h4>
+                <div class="modal-gallery">
+                    <div class="gallery-placeholder"><img src="inote-list.jpg" alt="Daftar Catatan"
+                            onerror="this.parentElement.innerText='[Screenshot Halaman Utama iNote]'" /></div>
+                    <div class="gallery-placeholder"><img src="inote-editor.jpg" alt="Editor Catatan"
+                            onerror="this.parentElement.innerText='[Screenshot Form Tambah Catatan]'" /></div>
+                </div>
+            </div>
+
+            <!-- Detail Project 3: Perpustakaan -->
+            <div id="project-perpus" class="modal-project-detail" style="display: none;">
+                <h3>Sistem Informasi Perpustakaan MTs An'Nur Cirebon</h3>
+                <div class="modal-tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Library Management</span>
+                </div>
+                <p class="modal-desc">
+                    Sistem informasi ini dibangun khusus untuk digitalisasi manajemen perpustakaan di sekolah. Aplikasi
+                    ini mencakup siklus sirkulasi buku secara lengkap, mulai dari pendataan katalog buku, manajemen data
+                    keanggotaan siswa dan petugas, pencatatan transaksi peminjaman serta pengembalian, hingga kalkulasi
+                    denda otomatis jika terjadi keterlambatan pengembalian.
+                </p>
+                <h4>Detail Gambar</h4>
+                <div class="modal-gallery">
+                    <div class="gallery-placeholder"><img src="image/indexPerpus.png" alt="Halaman Index"
+                            onerror="this.parentElement.innerText='[Screenshot Transaksi Peminjaman]'" /></div>
+                    <div class="gallery-placeholder"><img src="image/bukuPerpus.png" alt="Daftar Buku"
+                            onerror="this.parentElement.innerText='[Screenshot Manajemen Buku]'" /></div>
+                    <div class="gallery-placeholder"><img src="image/perpus3Perpus.png" alt="Data Sirkulasi Buku"
+                            onerror="this.parentElement.innerText='[Screenshot Transaksi Peminjaman]'" /></div>
+                    <div class="gallery-placeholder"><img src="image/admin1Perpus.png" alt="Admin Perpustakaan"
+                            onerror="this.parentElement.innerText='[Screenshot Admin Perpustakaan]'" /></div>
+                </div>
+            </div>
+
+            <!-- Detail Project 4: AR Mapping -->
+            <div id="project-ar" class="modal-project-detail" style="display: none;">
+                <h3>Augmented Reality Mapping</h3>
+                <div class="modal-tags">
+                    <span class="tag">Unity</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">Blender</span>
+                    <span class="tag">3D Modeling</span>
+                </div>
+                <p class="modal-desc">
+                    Aplikasi pengenalan gedung interaktif tiga dimensi yang mengintegrasikan teknologi Augmented Reality
+                    (AR). Dikembangkan menggunakan Unity Engine dengan visual aset bangunan yang di-modeling langsung
+                    dari Blender. Berfungsi sebagai alat bantu visualisasi gedung lingkungan kampus secara
+                    imersif dan modern bagi pengguna.
+                </p>
+                <h4>Detail Gambar</h4>
+                <div class="modal-gallery">
+                    <div class="gallery-placeholder"><img src="image/tower1.jpeg" alt="Implementasi AR"
+                            onerror="this.parentElement.innerText='[Screenshot Kamera AR]'" /></div>
+                    <div class="gallery-placeholder"><img src="image/3d1.png" alt="Model 3D"
+                            onerror="this.parentElement.innerText='[Screenshot Aset 3D Blender]'" /></div>
+                    <div class="gallery-placeholder"><img src="image/3d2.png" alt="Model 3D"
+                            onerror="this.parentElement.innerText='[Screenshot Aset 3D Blender]'" /></div>
+                    <div class="gallery-placeholder"><img src="image/audit.jpeg" alt="Implementasi AR"
+                            onerror="this.parentElement.innerText='[Screenshot Kamera AR]'" /></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 5. Section Contact -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+
+            <div class="contact-wrapper">
+                <!-- Kolom Kiri: Informasi Detail Kontak -->
+                <div class="contact-info-panel">
+                    <h3>Mari Terhubung!</h3>
+                    <p class="contact-text-p">Ada proyek menarik, peluang kerja sama, atau sekadar ingin berdiskusi?
+                        Jangan ragu untuk menghubungi saya melalui kontak di bawah atau formulir di samping.</p>
+
+                    <div class="info-item-list">
+                        <div class="info-item">
+                            <span class="info-icon">📧</span>
+                            <div class="info-details">
+                                <h5>Email</h5>
+                                <p>aghiva0127@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">💬</span>
+                            <div class="info-details">
+                                <h5>WhatsApp</h5>
+                                <p>+62 838-6603-2297</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <div class="info-details">
+                                <h5>Lokasi</h5>
+                                <p>Cirebon, Jawa Barat, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Form Pesan Langsung -->
+                <div class="contact-form-panel">
+                    <form class="interactive-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Alamat Email</label>
+                            <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan Anda</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tuliskan pesan Anda di sini..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="https://github.com/aghivada" target="_blank" class="social-icon" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://instagram.com/aghivada" target="_blank" class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:aghiva0127@gmail.com" class="social-icon" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <p class="copyright">&copy; 2026 Aghivada. Made With 🦾</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
