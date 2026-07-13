@@ -389,7 +389,8 @@
 
                 <!-- Kolom Kanan: Form Pesan Langsung -->
                 <div class="contact-form-panel">
-                    <form class="interactive-form" action="#" method="POST">
+                    <form class="interactive-form" id="my-form" action="https://formspree.io/f/mqerkayd" method="POST"
+                        onsubmit="handleSubmit(event)">
                         <div class="form-group">
                             <label for="name">Nama Lengkap</label>
                             <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
@@ -403,11 +404,13 @@
                             <textarea id="message" name="message" rows="5" placeholder="Tuliskan pesan Anda di sini..."
                                 required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-submit">Kirim Pesan</button>
+                        <button type="submit" id="submit-btn" class="btn btn-submit">Kirim Pesan</button>
+
+                        <p id="form-status"
+                            style="margin-top: 15px; font-weight: bold; text-align: center; display: none;"></p>
                     </form>
                 </div>
             </div>
-
         </div>
     </section>
 

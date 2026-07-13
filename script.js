@@ -71,3 +71,56 @@ function closeProjectModal(event) {
         closeModalAction();
     }
 }
+
+// ==========================================
+// FUNGSI KIRIM FORM KONTAK VIA FORMSPREE
+// ==========================================
+async function handleSubmit(event) {
+    event.preventDefault(); // Mencegah form mengarah ke halaman Formspree
+
+    const form = document.getElementById("my-form");
+    const status = document.getElementById("form-status");
+    const button = document.getElementById("submit-btn");
+    const data = new FormData(form);
+
+    // Ubah teks tombol saat sedang mengirim
+    button.innerText = "Mengirim...";
+    button.disabled = true;
+
+    // Kirim data ke Formspree via Fetch API
+    fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            // Jika sukses: Tampilkan pesan, beri warna hijau, dan kosongkan form
+            status.innerHTML = "Pesan telah terkirim!";
+            status.style.color = "#28a745"; // Warna hijau sukses
+            status.style.display = "block";
+            form.reset(); // Mengosongkan semua isi inputan form
+        } else {
+            // Jika respons server gagal
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                } else {
+                    status.innerHTML = "Gagal mengirim pesan. Silakan coba lagi.";
+                }
+                status.style.color = "#dc3545"; // Warna merah error
+                status.style.display = "block";
+            });
+        }
+    }).catch(error => {
+        // Jika terjadi kendala jaringan
+        status.innerHTML = "Terjadi kesalahan koneksi. Silakan coba lagi.";
+        status.style.color = "#dc3545";
+        status.style.display = "block";
+    }).finally(() => {
+        // Kembalikan status tombol seperti semula
+        button.innerText = "Kirim Pesan";
+        button.disabled = false;
+    });
+}
