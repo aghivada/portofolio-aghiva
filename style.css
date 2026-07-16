@@ -389,22 +389,6 @@ body {
     object-fit: cover;
 }
 
-/* Penyesuaian Responsif di HP */
-@media (max-width: 576px) {
-    .modal-overlay {
-        padding: 1rem;
-    }
-
-    .modal-content {
-        padding: 1.5rem 1rem;
-    }
-
-    .modal-project-detail h3 {
-        font-size: 1.4rem;
-        padding-right: 1.5rem;
-    }
-}
-
 /* ==========================================================================
    5. ABOUT SECTION
    ========================================================================== */
@@ -599,6 +583,76 @@ body {
     font-weight: 600;
     border-radius: 4px;
     margin-right: 0.5rem;
+}
+
+/* --- CSS Utama Sertifikasi (Simpel & Bersih) --- */
+.certifications-section {
+    padding: 60px 0;
+    background-color: var(--bg-secondary, #f9f9f9);
+}
+
+.certifications-section .section-title-container {
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.cert-card-simple {
+    background: var(--card-bg, #ffffff);
+    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card-simple:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+.cert-card-simple h3 {
+    font-size: 1.2rem;
+    color: var(--text-color, #333);
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+/* Warna ikon lencana mengikuti warna utama tema web Anda */
+.cert-badge-icon {
+    color: var(--primary-color, #0070f3);
+    margin-right: 6px;
+}
+
+.cert-meta {
+    font-size: 0.95rem;
+    color: var(--text-muted, #666);
+    margin: 0 0 20px 0;
+}
+
+.cert-link-simple {
+    font-size: 0.95rem;
+    color: var(--primary-color, #0070f3);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+}
+
+.cert-link-simple:hover {
+    text-decoration: underline;
 }
 
 /* ==========================================================================
@@ -865,4 +919,57 @@ footer {
     .contact-form-panel {
         padding: 1.5rem;
     }
+}
+
+/* Perbaikan Total Agar Ikon dan Judul Selalu Sejajar Mendatar */
+@media (max-width: 576px) {
+    .certifications-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 15px;
+        /* Memberi sedikit jarak aman dari tepi layar HP */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .cert-card {
+        /* Tetap mempertahankan bentuk flex horizontal default */
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .cert-icon {
+        font-size: 1.6rem;
+        /* Menyesuaikan sedikit ukuran ikon di HP */
+        padding: 8px 10px;
+        flex-shrink: 0;
+        /* Mencegah ikon mengecil/gepeng saat teks judul sangat panjang */
+    }
+
+    .cert-info h3 {
+        font-size: 1.05rem;
+        /* Menyesuaikan ukuran font judul agar pas di layar kecil */
+        line-height: 1.4;
+        margin: 0 0 6px 0;
+        word-wrap: break-word;
+        /* Memastikan teks panjang membungkus ke bawah dengan aman */
+    }
+
+    .cert-issuer,
+    .cert-date {
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+    }
+
+    .btn-cert-link {
+        font-size: 0.9rem;
+        margin-top: 8px;
+    }
+}
+
+.certifications-section .section-title-container {
+    margin-bottom: 5px;
+    padding: 0 20px;
+    /* Memberikan ruang aman di layar mobile agar tidak menempel ke tepi */
 }
