@@ -231,6 +231,37 @@
                             untuk detail &rarr;</span>
                     </div>
                 </div>
+
+                <div class="project-card" onclick="openProjectModal('project-qibla')">
+                    <div class="project-info">
+                        <h4>Qibla Theodolite</h4>
+                        <p>Aplikasi mobile penunjuk arah kiblat presisi tinggi menggunakan sensor kompas dan theodolite
+                            digital.</p>
+                        <span class="tag">React Native</span>
+                        <span class="tag">Expo</span>
+                        <span class="tag">Tailwind</span>
+                        <span
+                            style="display: block; margin-top: 1rem; font-size: 0.85rem; color: var(--primary-color); font-weight: 600;">
+                            Klik untuk detail &rarr;
+                        </span>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openProjectModal('project-masjid-3d')">
+                    <div class="project-info">
+                        <h4>3D Website Showcase Masjid</h4>
+                        <p>Portal web interaktif berbasis 3D untuk menampilkan model arsitektur masjid secara imersif
+                            langsung di browser.</p>
+                        <span class="tag">Next.js</span>
+                        <span class="tag">Blender</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">3D Model</span>
+                        <span
+                            style="display: block; margin-top: 1rem; font-size: 0.85rem; color: var(--primary-color); font-weight: 600;">
+                            Klik untuk detail &rarr;
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -388,6 +419,105 @@
                             onerror="this.parentElement.innerText='[Screenshot Aset 3D Blender]'" /></div>
                     <div class="gallery-placeholder"><img src="image/audit.jpeg" alt="Implementasi AR"
                             onerror="this.parentElement.innerText='[Screenshot Kamera AR]'" /></div>
+                </div>
+            </div>
+
+            <div id="project-qibla" class="modal-project-detail" style="display: none;">
+                <h3>Qibla Theodolite</h3>
+                <div class="modal-tags">
+                    <span class="tag">React Native</span>
+                    <span class="tag">Expo</span>
+                    <span class="tag">Tailwind</span>
+                </div>
+                <p class="modal-desc">
+                    Aplikasi mobile berbasis Android yang menggunakan metode theodolite
+                    untuk membantu pengguna menentukan arah kiblat secara akurat dan real-time berdasarkan matahari dan
+                    koordinat lokasi. Dikembangkan menggunakan kerangka kerja React Native Expo dengan tata letak
+                    Tailwind CSS agar menghasilkan antarmuka
+                    yang responsif, modern, dan mudah dioperasikan.
+                </p>
+                <h4>Detail Gambar</h4>
+                <div class="modal-gallery mobile-gallery">
+                    <div class="gallery-placeholder">
+                        <img src="image/qiblat4.jpeg" alt="Halaman Utama Kompas"
+                            onerror="this.parentElement.innerText='[Screenshot Halaman Utama]'" />
+                    </div>
+                    <div class="gallery-placeholder">
+                        <img src="image/qiblat2.jpeg" alt="Kalibrasi Sensor"
+                            onerror="this.parentElement.innerText='[Screenshot Fitur Kalibrasi]'" />
+                    </div>
+                    <div class="gallery-placeholder">
+                        <img src="image/qiblat3.jpeg" alt="Pengaturan Lokasi"
+                            onerror="this.parentElement.innerText='[Screenshot Pengaturan Lokasi]'" />
+                    </div>
+                    <div class="gallery-placeholder">
+                        <img src="image/qiblat1.jpeg" alt="Pengaturan Lokasi"
+                            onerror="this.parentElement.innerText='[Screenshot Pengaturan Lokasi]'" />
+                    </div>
+                    <div class="gallery-placeholder">
+                        <img src="image/qiblat5.jpeg" alt="Pengaturan Lokasi"
+                            onerror="this.parentElement.innerText='[Screenshot Pengaturan Lokasi]'" />
+                    </div>
+                    <div class="gallery-placeholder">
+                        <img src="image/qiblat6.jpeg" alt="Pengaturan Lokasi"
+                            onerror="this.parentElement.innerText='[Screenshot Pengaturan Lokasi]'" />
+                    </div>
+                    <div class="gallery-placeholder">
+                        <img src="image/qiblat7.jpeg" alt="Pengaturan Lokasi"
+                            onerror="this.parentElement.innerText='[Screenshot Pengaturan Lokasi]'" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detail Project 6: 3D Website Showcase Masjid -->
+            <div id="project-masjid-3d" class="modal-project-detail" style="display: none;">
+                <h3>3D Website Showcase Masjid</h3>
+                <div class="modal-tags">
+                    <span class="tag">Next.js</span>
+                    <span class="tag">Blender</span>
+                    <span class="tag">Tailwind CSS</span>
+                    <span class="tag">Three.js / Model Viewer</span>
+                </div>
+                <p class="modal-desc">
+                    Portal web interaktif yang dirancang untuk menampilkan model arsitektur 3D masjid secara
+                    detail dan imersif.
+                    Aset pemodelan 3D dibangun menggunakan Blender dan diekspor ke format web-friendly, kemudian
+                    diintegrasikan
+                    ke dalam aplikasi berbasis Next.js dengan styling Tailwind CSS agar memberikan pengalaman
+                    visual yang memukau,
+                    responsif, serta dapat diputar dan dieksplorasi langsung secara real-time oleh pengguna di
+                    browser.
+                </p>
+                <h4>Detail Gambar</h4>
+                <div class="modal-gallery">
+                    <div class="gallery-placeholder">
+                        <img src="image/falak3d1.png" alt="Tampilan 3D Viewer"
+                            onerror="this.parentElement.innerText='[Screenshot 3D Showcase Utama]'" />
+                    </div>
+                    <div class="gallery-placeholder">
+                        <img src="image/falak3d2.png" alt="Proses Pemodelan Blender"
+                            onerror="this.parentElement.innerText='[Screenshot Asset Pemodelan Blender]'" />
+                    </div>
+                    <div class="gallery-placeholder">
+                        <img src="image/falak3d3.png" alt="Detail Informasi & Navigasi"
+                            onerror="this.parentElement.innerText='[Screenshot Informasi Arsitektur]'" />
+                    </div>
+                    <div class="gallery-placeholder">
+                        <img src="image/falak3d4.png" alt="Detail Informasi & Navigasi"
+                            onerror="this.parentElement.innerText='[Screenshot Informasi Arsitektur]'" />
+                    </div>
+                    <div class="gallery-placeholder">
+                        <img src="image/falak3d5.png" alt="Detail Informasi & Navigasi"
+                            onerror="this.parentElement.innerText='[Screenshot Informasi Arsitektur]'" />
+                    </div>
+                    <div class="gallery-placeholder">
+                        <img src="image/falak3d6.png" alt="Detail Informasi & Navigasi"
+                            onerror="this.parentElement.innerText='[Screenshot Informasi Arsitektur]'" />
+                    </div>
+                    <div class="gallery-placeholder">
+                        <img src="image/falak3d7.png" alt="Detail Informasi & Navigasi"
+                            onerror="this.parentElement.innerText='[Screenshot Informasi Arsitektur]'" />
+                    </div>
                 </div>
             </div>
 
